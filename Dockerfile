@@ -35,7 +35,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-RUN yarn add npm-run-all dotenv prisma
+RUN yarn add npm-run-all dotenv@10.0.0 prisma@4.13.0 @prisma/client@4.13.0
 
 # You only need to copy next.config.js if you are NOT using the default configuration
 COPY --from=builder /app/next.config.js .
